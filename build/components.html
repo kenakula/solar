@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="page  no-js" lang="ru">
+  <head>
+    <title>Компоненты</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta content="notranslate" name="google">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Компоненты используемые в проекте">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <noscript>У вас отключен JavaScript. Это пугает.</noscript>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-planet" viewBox="0 0 512 512"><path d="M44.96 401h422.08a254.077 254.077 0 0017.821-30H27.139a254.077 254.077 0 0017.821 30zM11.109 181c-5.89 19.32-9.482 39.432-10.662 60h511.106c-1.181-20.568-4.772-40.68-10.662-60zM14.396 341h483.207c7.843-22.345 12.563-45.856 13.949-70H.447c1.386 24.144 6.107 47.655 13.949 70zM459.775 101H52.225c-11.903 15.582-21.892 32.344-29.837 50h467.224c-7.945-17.656-17.934-34.418-29.837-50zM432.941 71C385.081 25.173 322.477 0 256 0S126.919 25.173 79.059 71zM69.173 431a265.23 265.23 0 005.808 6.02C123.333 485.371 187.62 512 256 512s132.667-26.629 181.02-74.98a261.107 261.107 0 005.808-6.02z"/></symbol></svg></div>
+    <div class="page__inner">
+      <div class="page__content">
+        <header class="header" id="headerMenu">
+          <div class="header__wrapper">
+          </div>
+        </header>
+        <style>
+          main > .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+          
+          .components-backwards {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-left: 7px;
+          }
+          
+          .components-backwards span:first-child {
+            position: relative;
+            top: -3px;
+          
+            display: inline-block;
+            margin-right: 15px;
+          
+            font-size: 16px;
+            line-height: 24px;
+            vertical-align: top;
+          
+            transform: scale(2);
+          }
+          
+          .components-backwards span:last-child {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          
+          .components-backwards + h1 {
+            margin-bottom: 0;
+          }
+          
+          .container > section {
+            padding: 20px 0;
+          }
+          
+          .component-container {
+            min-height: 100px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid grey;
+          }
+          
+        </style>
+        <main>
+          <div class="container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+            <h1>Компоненты, используемые в вёрстке</h1>
+            <section>
+              <h2>main-nav + toggler</h2>
+              <p>Класс компонента: <span style="color: blue;">.main-nav</span> \ модификаторы: <span style="color: blue;">--expanded</span></p>
+              <p style="color: tomato;">Вставляется в блоке <b>nav</b> pug файла, принимает в себя объект из pug/data</p>
+              <div class="component-container">
+                <nav class="main-nav" id="mainNav">
+                  <button class="toggler main-nav__toggler" aria-label="Открыть меню" id="toggler" data-target-id="headerMenu" data-target-class-toggle="header--opened">
+                    <svg width="40" height="40" aria-hidden="true">
+                      <use xlink:href="#icon-planet"></use>
+                    </svg>
+                  </button>
+                  <div class="main-nav__toolbar">
+                    <div class="main-nav__toolbar-section main-nav__toolbar-section--speed">
+                      <div class="main-nav__button-wrap">
+                        <button class="button button--toolbar" type="button">up</button>
+                        <button class="button button--toolbar" type="button">down</button>
+                      </div>
+                      <div class="main-nav__speed-text"><span>1</span>x</div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
