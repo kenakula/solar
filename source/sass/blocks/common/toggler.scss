@@ -7,7 +7,7 @@
   justify-content: center;
   width: 60px;
   height: 70px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   color: $color-gainsboro;
   border: 2px solid $color-gainsboro;
   transition: all $default-transition-settings;

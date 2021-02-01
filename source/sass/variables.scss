@@ -8,17 +8,21 @@ $color-default-black:             #000000;
 $color-default-white:             #ffffff;
 $color-transparent:               rgba(255, 255, 255, 0);
 
+$border-radius:                     5px;
+
 // Base
 
 $color-black:                     #0e0e0e;
 $color-white:                     #f2f2f2;
 $color-blue:                      #2c39f2;
 
+$color-nero:                      #191919;
+$color-jaguar:                    #1c192b;
 $color-gainsboro:                 #b1adad;
 
 // Gradient
 
-$sky-gradient:                      radial-gradient(ellipse at 60% 50%, #1c192b 0%, #191919 70%, #111111 100%);
+$sky-gradient:                      radial-gradient(ellipse at 60% 50%, $color-jaguar 0%, $color-nero 70%, $color-black 100%);
 
 // Typography
 //---------------------------------
