@@ -1,0 +1,33 @@
+
+// .btn-grad {background-image: linear-gradient(to right, #FFEEEE 0%, #DDEFBB  51%, #FFEEEE  100%)}
+
+// .btn-grad {
+//   margin: 10px;
+//   padding: 15px 45px;
+//   text-align: center;
+//   text-transform: uppercase;
+//   transition: 0.5s;
+//   background-size: 200% auto;
+//   color: white;
+//   box-shadow: 0 0 20px #eee;
+//   border-radius: 10px;
+//   display: block;
+// }
+
+// .btn-grad:hover {
+//   background-position: right center; /* change the direction of the change here */
+//   color: #fff;
+//   text-decoration: none;
+// }
+
+.button {
+  @include button-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  min-height: 30px;
+  min-width: 60px;
+  border: 1px solid $color-white;
+}

@@ -286,17 +286,18 @@ const serve = () => {
     refresh,
   ));
 
+  // svg sprite watcher
+  watch(Paths.images.spriteSrc, { events: ['all'], delay: 100 }, series(
+    generateSvgSprite,
+    compilePug,
+    refresh,
+  ));
+
   // images watcher
   watch(Paths.images.src, { events: ['all'], delay: 100 }, series(
     parallel(copyImg, createWebp),
     optimizeImg,
   ))
-
-  // svg sprite watcher
-  watch(Paths.images.spriteSrc, { events: ['all'], delay: 100 }, series(
-    generateSvgSprite,
-    refresh,
-  ));
 };
 
 exports.build = series(

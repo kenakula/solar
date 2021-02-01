@@ -4,7 +4,7 @@
   @return $size / 16 * 1rem;
 }
 
-@mixin typography($font-size, $line-height) {
+@mixin font($font-size, $line-height) {
   font-size: rem($font-size);
   line-height: rem($line-height);
 }
@@ -35,12 +35,12 @@
   cursor: pointer;
 }
 
-@mixin transition {
-  transition: all $default-transition-settings;
+@mixin transition($property) {
+  transition: $property $default-transition-settings;
 }
 
 @mixin interactive-opacity {
-  transition: opacity $default-transition-settings;
+  @include transition(opacity);
 
   cursor: pointer;
 
@@ -55,7 +55,7 @@
 }
 
 @mixin active-opacity {
-  transition: opacity $default-transition-settings;
+  @include transition(opacity);
 
   &:active {
     opacity: 0.5;

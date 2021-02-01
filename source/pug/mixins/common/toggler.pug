@@ -14,5 +14,4 @@ mixin toggler(label, targetId, switchableClass)
     if (typeof(switchableClass) !== "undefined" && switchableClass !== "") attributes["data-target-class-toggle"] = switchableClass
 
   button.toggler(aria-label=label)&attributes(attributes)
-    =text
-    span
+    +icon('icon-planet', 40, 40)
