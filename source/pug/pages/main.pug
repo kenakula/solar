@@ -1,0 +1,38 @@
+extends ../base/layout.pug
+
+block data
+  include ../data/placeholder.pug
+  include ../data/main-nav.data.pug
+
+block variables
+  -
+    const title = "ProjectName — Главная";
+    const hasHeader = true;
+    const hasFooter = true;
+    const currentPage = "main"; //- для остальных страниц пишем либо пустую строку, либо индекс
+
+block append head
+  //- используйте только для шрифта находящегося на первом экране
+  link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
+
+block nav
+  +main-nav(mainNav)
+
+block main
+  main
+    .container
+      p(style="margin-top: 40px;") Пример вызова модалок
+      p
+        a(href="#", data-modal="feedback") modal--feedback link
+      p
+        a(href="#", data-modal="success") modal--success link
+
+      p(style="margin-top: 40px;") Пример импорта из `pug/data`
+      h3= heading.title
+      i= heading.description
+
+block modals
+  +modal("modal--feedback")
+    +modal-feedback()
+  +modal("modal--success modal--no-scale modal--fit-content")
+    +modal-success()
