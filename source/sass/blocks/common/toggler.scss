@@ -8,17 +8,29 @@
   width: 60px;
   height: 70px;
   border-radius: $border-radius;
-  color: $color-gainsboro;
-  border: 2px solid $color-gainsboro;
+  color: $color-white;
+  border: 2px solid $color-white;
   transition: all $default-transition-settings;
   outline: none;
 
-  &:hover {
-    color: $color-white;
-    border-color: $color-white;
+  @include min-laptop {
+    &:hover {
+      color: $color-gainsboro;
+      border-color: $color-gainsboro;
+    }
   }
 
-  svg {
-    fill: currentColor;
+  @include tablet {
+    width: 40px;
+    height: 50px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include mobile {
+    margin-right: 0;
   }
 }

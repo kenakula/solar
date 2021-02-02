@@ -6,8 +6,12 @@ mixin main-nav(props)
     .main-nav__toolbar
       .main-nav__toolbar-section.main-nav__toolbar-section--speed
         .main-nav__button-wrap
-          button.button.button--toolbar(type="button") up
-          button.button.button--toolbar(type="button") down
+          button.button.button--sheen.main-nav__button.main-nav__button--up(type="button")
+            +icon('icon-down-arrow', 35, 30)
+          button.button.button--sheen.main-nav__button.main-nav__button--down(type="button")
+            +icon('icon-down-arrow', 35, 30)
         .main-nav__speed-text
             span 1
             | x
+        .main-nav__caption
+          span speed

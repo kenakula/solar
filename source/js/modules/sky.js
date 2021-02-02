@@ -10,19 +10,20 @@ const drawStars = () => {
   const colorRange = JSON.parse(colors);
 
   const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
 
   const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
-    for (let i = 0; i < +starsCount; i++) {
-      let x = Math.random() * canvas.offsetWidth;
-      let y = Math.random() * canvas.offsetHeight;
+  const render = (canvasEl, stars, colorsArr) => {
+    canvasEl.width = window.innerWidth;
+    canvasEl.height = window.innerHeight;
+
+    for (let i = 0; i < +stars; i++) {
+      let x = Math.random() * canvasEl.offsetWidth;
+      let y = Math.random() * canvasEl.offsetHeight;
       let radius = Math.random() * 1.2;
-      let hue = colorRange[getRandom(0, colorRange.length - 1)];
+      let hue = colorsArr[getRandom(0, colorsArr.length - 1)];
       let saturation = getRandom(50, 100);
 
       ctx.beginPath();
@@ -30,6 +31,15 @@ const drawStars = () => {
       ctx.fillStyle = `hsl(${hue}, ${saturation}%, 88%)`;
       ctx.fill();
     }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    render(canvas, starsCount, colorRange);
+  });
+
+  window.addEventListener('resize', () => {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    render(canvas, starsCount, colorRange);
   });
 };
 
