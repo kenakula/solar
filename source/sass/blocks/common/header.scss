@@ -50,6 +50,10 @@
       width: 100%;
       border-color: $color-white;
       color: $color-white;
+
+      @include mobile {
+        width: 40px;
+      }
     }
   }
 

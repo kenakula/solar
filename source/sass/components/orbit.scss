@@ -1,0 +1,27 @@
+.orbit {
+  position: absolute;
+  z-index: $orbit-z;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid rgba($color: $color-white, $alpha: 0.2);
+  // animation-name: rotate-orbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  @each $name, $speed, $diameter in $orbits {
+    $time: unquote($string: $speed);
+    $width: unquote($string: $diameter);
+    $angle: random($limit: 360) + deg;
+
+    &--#{$name} {
+      width: $width;
+      height: $width;
+      animation-duration: $time;
+      transform: translate(-50%, -50%) rotate($angle);
+    }
+  }
+}

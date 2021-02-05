@@ -1,0 +1,8 @@
+mixin planet(props, hasRings)
+  - const { name } = props;
+  - const classes = `planet--${name} ${name}`;
+
+  .planet(class=classes)
+    if hasRings
+      .planet__ring(class=`planet__ring--${name}`)
+    block

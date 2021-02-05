@@ -19,6 +19,7 @@ $color-blue:                      #2c39f2;
 $color-nero:                      #191919;
 $color-jaguar:                    #1c192b;
 $color-gainsboro:                 #b1adad;
+$color-cadmium-orange:            #f28f3b;
 
 // Gradient
 
@@ -55,5 +56,54 @@ $retina-dppx:                       1.5dppx;
 // Z-indexes
 //---------------------------------
 
-$header-z:                          10;
+$header-z:                          20;
+$planet-z:                          5;
 $sky-z:                             1;
+$sun-z:                             100;
+$orbit-z:                           50;
+$solar-z:                           10;
+
+// Perspective
+//---------------------------------
+
+$solar-perspective:                 400px;
+
+// Perspective
+//---------------------------------
+
+// Orbit in days
+//---------------------------------
+
+$day-in-seconds:                    1;
+
+$mercury-days:                      87.97;
+$venus-days:                        224.7;
+$earth-days:                        365.2;
+$mars-days:                         686.9;
+$asteroids-days:                    1679;
+$jupiter-days:                      432890;
+$saturn-days:                       10752;
+$uranus-days:                       30660;
+$neptune-days:                      60115;
+$pluto-days:                        90520;
+
+
+// Spin in days
+//---------------------------------
+
+$mercury-spin:                      58.64;
+$venus-spin:                        1;
+$earth-spin:                        1;
+$mars-spin:                         1.02;
+$jupiter-spin:                      0.4;
+$saturn-spin:                       0.4;
+$uranus-spin:                       0.72;
+$neptune-spin:                      0.67;
+$pluto-spin:                        6.387;
+
+// Asteroid Belt
+// --------------------------------
+
+$asteroid-belt-border:             1px solid rgba(102, 166, 229, 0.12);
+$asteroid-orbit-outer:             400px;
+$asteroid-orbit-inner:             300px;
