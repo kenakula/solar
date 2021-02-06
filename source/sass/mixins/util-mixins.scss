@@ -231,3 +231,60 @@
     }
   }
 }
+
+// Project
+// ------------------------
+
+@mixin bg-img($image) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin planet-shadows($diameter) {
+  &::after {
+    @include pseudo;
+
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: 0;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: linear-gradient(to bottom,
+      #1c192b 18%,
+      rgba(28, 25, 43, 0.9) 44%,
+      rgba(28, 25, 43, 0.7) 64%,
+      rgba(28, 25, 43, 0.7) 64%,
+      rgba(255, 255, 255, 0) 100%);
+    transform: rotate(5deg);
+  }
+}
+
+@mixin planet-bg($image, $direction) {
+  &::before {
+    @include pseudo;
+    @include rotate-planet($direction);
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url($image);
+    background-position: center;
+    background-size: cover;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@mixin ring($radius, $color, $width) {
+  $color: unquote($string: $color);
+
+  top: $radius;
+  right: $radius;
+  bottom: $radius;
+  left: $radius;
+  box-shadow: 0 0 0 $width $color;
+}

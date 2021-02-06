@@ -84,10 +84,11 @@ const Paths = {
     dest: BUILD_PATH,
   },
   images: {
-    src: `${SOURCE_PATH}img/**/*.{jpg,png,gif,webp,svg}`,
+    src: `${SOURCE_PATH}img/**/*.{jpg,png,gif,webp}`,
     webpSrc: `${SOURCE_PATH}img/**/*.{png,jpg}`,
     dest: `${BUILD_PATH}img/`,
-    spriteSrc: `${SOURCE_PATH}/img/svg-sprite/*.svg`,
+    spriteSrc: `${SOURCE_PATH}img/svg-sprite/*.svg`,
+    svgWatch: `${SOURCE_PATH}img/**/*.svg`,
     spriteFileName: 'sprite.svg',
   },
   fonts: {
@@ -169,6 +170,12 @@ const copyImg = () => {
     .pipe(dest(Paths.images.dest));
 };
 exports.copyImg = copyImg;
+
+const copySvg = () => {
+  return src(Paths.images.svgWatch, { since: lastRun(copySvg) })
+    .pipe(debug({ title: 'svg copied:' }))
+    .pipe(dest(Paths.images.dest));
+}
 
 // converts images to webp
 const createWebp = () => {
@@ -286,32 +293,32 @@ const serve = () => {
     refresh,
   ));
 
-  // svg sprite watcher
-  watch(Paths.images.spriteSrc, { events: ['all'], delay: 100 }, series(
+  // svg watcher
+  watch(Paths.images.svgWatch, { events: ['all'], delay: 100 }, series(
     generateSvgSprite,
     compilePug,
+    copySvg,
     refresh,
   ));
 
   // images watcher
   watch(Paths.images.src, { events: ['all'], delay: 100 }, series(
-    parallel(copyImg, createWebp),
-    optimizeImg,
+    parallel(copyImg, createWebp)
   ))
 };
 
 exports.build = series(
   cleanBuildDir,
-  parallel(copyImg, copyAssets, generateSvgSprite),
+  parallel(copyImg, copyAssets, copySvg, generateSvgSprite),
   parallel(compilePug, createWebp),
   parallel(compileCss, buildJs, optimizeImg),
 );
 
 exports.default = series(
   cleanBuildDir,
-  parallel(copyImg, copyAssets, generateSvgSprite),
+  parallel(copyImg, copySvg, copyAssets, generateSvgSprite),
   parallel(compilePug, createWebp),
-  parallel(compileCss, buildJs, optimizeImg),
+  parallel(compileCss, buildJs),
   serve
 );
 

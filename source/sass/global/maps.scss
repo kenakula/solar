@@ -1,0 +1,44 @@
+$mercury-orbit-speed: revolution($mercury-days);
+$venus-orbit-speed: revolution($venus-days);
+$earth-orbit-speed: revolution($earth-days);
+$mars-orbit-speed: revolution($mars-days);
+$asteroids-orbit-speed: revolution($asteroids-days);
+$jupiter-orbit-speed: revolution($jupiter-days);
+$saturn-orbit-speed: revolution($saturn-days);
+$uranus-orbit-speed: revolution($uranus-days);
+$neptune-orbit-speed: revolution($neptune-days);
+$pluto-orbit-speed: revolution($pluto-days);
+
+$orbits:
+  "mercury" $mercury-orbit-speed "80px",
+  "venus" $venus-orbit-speed "120px",
+  "earth" $earth-orbit-speed "170px",
+  "mars" $mars-orbit-speed "240px",
+  "asteroids" $asteroids-orbit-speed "500px",
+  "jupiter" $jupiter-orbit-speed "480px",
+  "saturn" $saturn-orbit-speed "620px",
+  "uranus" $uranus-orbit-speed "770px",
+  "neptune" $neptune-orbit-speed "850px",
+  "pluto" $pluto-orbit-speed "900px";
+
+
+$mercury-spin: revolution($mercury-spin);
+$venus-spin: revolution($venus-spin);
+$earth-spin: revolution($earth-spin);
+$mars-spin: revolution($mars-spin);
+$jupiter-spin: revolution($jupiter-spin);
+$saturn-spin: revolution($saturn-spin);
+$uranus-spin: revolution($uranus-spin);
+$neptune-spin: revolution($neptune-spin);
+$pluto-spin: revolution($pluto-spin);
+
+$planets:
+  "mercury" "../img/content/mercury-bg.jpg" "8" "brown" $mercury-spin,
+  "venus" "../img/content/venus-bg.jpg" "14" "orange" $venus-spin,
+  "earth" "../img/content/earth-bg.jpg" "17" "blue" $earth-spin,
+  "mars" "../img/content/mars-bg.jpg" "14" "red" $mars-spin,
+  "jupiter" "../img/content/jupiter-bg.jpg" "60" "orange" $jupiter-spin,
+  "saturn" "../img/content/saturn-bg.jpg" "40" "yellow" $saturn-spin,
+  "uranus" "../img/content/uranus-bg.jpg" "30" "blue" $uranus-spin,
+  "neptune" "../img/content/neptune-bg.jpg" "25" "darkblue" $neptune-spin,
+  "pluto" "../img/content/mercury-bg.jpg" "10" "darkgrey" $pluto-spin;

@@ -8,17 +8,24 @@
 //---------------------------------
 
 @import "variables";
+@import "global/functions";
+@import "global/maps";
+@import "global/animations";
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/animations.scss";
 @import "global/container";
 
 // Blocks
 //---------------------------------
 
 @import "blocks/**/*.scss";
+
+// Components
+//---------------------------------
+
+@import "components/**/*.scss";
 
 // @import "blocks/page.scss";
 // @import "blocks/footer.scss";

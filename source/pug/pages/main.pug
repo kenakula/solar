@@ -2,6 +2,7 @@ extends ../base/layout.pug
 
 block data
   include ../data/main-nav.data.pug
+  include ../data/solar.data.pug
 
 block variables
   -
@@ -21,9 +22,29 @@ block nav
   +main-nav(mainNav)
 
 block main
-  main
+  main.solar
     +sky(sky)
-    .container
+    .solar__inner
+      +sun(sunImage)
+      +orbit(mercury)
+        +planet(mercury)
+      +orbit(venus)
+        +planet(venus)
+      +orbit(earth)
+        +planet(earth)
+      +orbit(mars)
+        +planet(mars)
+      .asteroid-belt.centered(data-speed="1679")
+      +orbit(jupiter)
+        +planet(jupiter)
+      +orbit(saturn)
+        +planet(saturn, true)
+      +orbit(uranus)
+        +planet(uranus, true)
+      +orbit(neptune)
+        +planet(neptune)
+      +orbit(pluto)
+        +planet(pluto)
 
 block modals
   +modal("modal--feedback")

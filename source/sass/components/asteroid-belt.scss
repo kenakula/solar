@@ -1,0 +1,28 @@
+.asteroid-belt {
+  position: absolute;
+  z-index: $orbit-z;
+  height: $asteroid-orbit-outer;
+  width: $asteroid-orbit-outer;
+  border-radius: 50%;
+  border: $asteroid-belt-border;
+  opacity: 0.7;
+  border-color: transparent;
+  overflow: hidden;
+  animation-name: rotate-orbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: $asteroids-orbit-speed;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: $asteroid-orbit-inner;
+    width: $asteroid-orbit-inner;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: asteroids(800, $asteroid-orbit-outer, -400/2, -148);
+    transform: translate(-50%, -50%);
+  }
+}

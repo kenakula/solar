@@ -70,3 +70,39 @@
     opacity: 0;
   }
 }
+
+@keyframes button-sheen {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotate-orbit {
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes rotate-planet-anticlockwise {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-planet-clockwise {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin rotate-planet($direction) {
+  @if $direction == "left" {
+    animation-name: rotate-planet-anticlockwise;
+  } @else {
+    animation-name: rotate-planet-clockwise;
+  }
+}

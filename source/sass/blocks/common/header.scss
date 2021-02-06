@@ -50,6 +50,30 @@
       width: 100%;
       border-color: $color-white;
       color: $color-white;
+
+      @include mobile {
+        width: 40px;
+      }
     }
+  }
+
+  @include tablet {
+    padding: 5px;
+    min-width: 250px;
+    transform: translateX(200px);
+
+    &--opened {
+      transform: translateX(0);
+    }
+  }
+
+  @include mobile {
+    left: 0;
+    top: 0;
+    right: auto;
+    min-height: auto;
+    transform: translateX(0);
+    min-width: 100vw;
+    border-left: none;
   }
 }
