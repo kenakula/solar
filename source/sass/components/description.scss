@@ -18,9 +18,14 @@
     letter-spacing: 0.02em;
     color: $color-white;
   }
+
+  @include tablet {
+    width: 35%;
+  }
 }
 
 .description__text {
+  font-size: 18px;
   color: $color-white;
 
   p {
@@ -29,6 +34,14 @@
     & + p {
       margin-top: 10px;
     }
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 12px;
   }
 }
 
@@ -52,9 +65,29 @@
       }
     }
   }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 12px;
+
+    a {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .description__author {
   opacity: 0.2;
   font-size: 14px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    font-size: 10px;
+  }
 }

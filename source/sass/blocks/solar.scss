@@ -15,4 +15,12 @@
   width: 1000px;
   height: 1000px;
   transform: translate(-35%, -50%);
+
+  @include laptop {
+    transform: translate(-40%, -50%) scale(0.8);
+  }
+
+  @include tablet {
+    transform: translate(-40%, -50%) scale(0.6);
+  }
 }
