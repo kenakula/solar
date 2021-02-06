@@ -74,7 +74,11 @@ $solar-perspective:                 400px;
 // Orbit in days
 //---------------------------------
 
-$day-in-seconds:                    1;
+:root {
+  --delimeter: 1;
+}
+
+$day-in-seconds:                    0.01;
 
 $mercury-days:                      87.97;
 $venus-days:                        224.7;

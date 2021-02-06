@@ -34,7 +34,7 @@ block main
         +planet(earth)
       +orbit(mars)
         +planet(mars)
-      .asteroid-belt.centered
+      .asteroid-belt.centered(data-speed="1679")
       +orbit(jupiter)
         +planet(jupiter)
       +orbit(saturn)
@@ -43,6 +43,8 @@ block main
         +planet(uranus, true)
       +orbit(neptune)
         +planet(neptune)
+      +orbit(pluto)
+        +planet(pluto)
 
 block modals
   +modal("modal--feedback")

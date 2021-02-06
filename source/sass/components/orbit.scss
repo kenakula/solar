@@ -5,7 +5,7 @@
   height: 250px;
   border-radius: 50%;
   border: 1px solid rgba($color: $color-white, $alpha: 0.2);
-  // animation-name: rotate-orbit;
+  animation-name: rotate-orbit;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   transform: translate(-50%, -50%);
@@ -13,7 +13,7 @@
   transform-style: preserve-3d;
 
   @each $name, $speed, $diameter in $orbits {
-    $time: unquote($string: $speed);
+    $time: $speed;
     $width: unquote($string: $diameter);
     $angle: random($limit: 360) + deg;
 
@@ -21,7 +21,19 @@
       width: $width;
       height: $width;
       animation-duration: $time;
-      transform: translate(-50%, -50%) rotate($angle);
+      // transform: translate(-50%, -50%) rotate($angle);
+
+      .orbit__inner {
+        transform: rotate($angle);
+      }
     }
   }
+}
+
+.orbit__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }

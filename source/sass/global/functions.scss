@@ -1,5 +1,5 @@
-@function revolution($planet-year-in-days, $mult: 1) {
-  @return $planet-year-in-days * $day-in-seconds * $mult + s;
+@function revolution($planet-year-in-days) {
+  @return $planet-year-in-days * $day-in-seconds + s;
 }
 
 @function alphaRandom() {

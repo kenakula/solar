@@ -4,13 +4,13 @@ mixin main-nav(props)
   nav.main-nav(class=allMods)&attributes(attributes)#mainNav
     +toggler("Открыть меню", "headerMenu", "header--opened").main-nav__toggler#toggler
     .main-nav__toolbar
-      .main-nav__toolbar-section.main-nav__toolbar-section--speed
+      .main-nav__toolbar-section.main-nav__toolbar-section--speed.js-toolbar
         .main-nav__button-wrap
-          button.button.button--sheen.main-nav__button.main-nav__button--up(type="button")
+          button.button.button--sheen.main-nav__button.main-nav__button--up.js-speed-up(type="button" data-multiplier="up")
             +icon('icon-down-arrow', 35, 30)
-          button.button.button--sheen.main-nav__button.main-nav__button--down(type="button")
+          button.button.button--sheen.main-nav__button.main-nav__button--down.js-speed-down(type="button" data-multiplier="down")
             +icon('icon-down-arrow', 35, 30)
-        .main-nav__speed-text
+        .main-nav__speed-text.js-speed-text
             span 1
             | x
         .main-nav__caption
