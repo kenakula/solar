@@ -62,7 +62,5 @@
   "engines": {
     "node": "8.15"
   },
-  "dependencies": {
-    "gsap": "^3.6.0"
-  }
+  "dependencies": {}
 }
