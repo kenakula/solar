@@ -1,5 +1,9 @@
 $fonts: (
-  ("", "Arial", 400, normal),
+  ("Big Shoulders Display", "big-shoulders-display-400", 400, normal),
+  ("Montserrat", "montserrat-300", 300, normal),
+  ("Montserrat", "montserrat-400", 400, normal),
+  ("Montserrat", "montserrat-500", 500, normal),
+  ("Montserrat", "montserrat-700", 700, normal),
 );
 
 @mixin font-face($family, $file-name, $weight, $style) {

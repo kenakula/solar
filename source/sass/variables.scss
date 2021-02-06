@@ -28,7 +28,8 @@ $sky-gradient:                      radial-gradient(ellipse at 60% 50%, $color-j
 // Typography
 //---------------------------------
 
-$font-family--:                     "", "Arial", sans-serif;
+$font-family--main:                     "Montserrat", "Verdana", sans-serif;
+$font-family--title:                    "Big Shoulders Display", "Arial", sans-serif;
 
 // Animation
 //---------------------------------
@@ -62,6 +63,7 @@ $sky-z:                             1;
 $sun-z:                             100;
 $orbit-z:                           50;
 $solar-z:                           10;
+$description-z:                     20;
 
 // Perspective
 //---------------------------------

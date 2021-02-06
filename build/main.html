@@ -20,10 +20,11 @@
     <meta name="description">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/big-shoulders-display-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
   <body>
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
-    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-down-arrow" viewBox="0 0 386.257 386.257"><path d="M0 96.879l193.129 192.5 193.128-192.5z"/></symbol><symbol id="icon-planet" viewBox="0 0 512 512"><path d="M44.96 401h422.08a254.077 254.077 0 0017.821-30H27.139a254.077 254.077 0 0017.821 30zM11.109 181c-5.89 19.32-9.482 39.432-10.662 60h511.106c-1.181-20.568-4.772-40.68-10.662-60zM14.396 341h483.207c7.843-22.345 12.563-45.856 13.949-70H.447c1.386 24.144 6.107 47.655 13.949 70zM459.775 101H52.225c-11.903 15.582-21.892 32.344-29.837 50h467.224c-7.945-17.656-17.934-34.418-29.837-50zM432.941 71C385.081 25.173 322.477 0 256 0S126.919 25.173 79.059 71zM69.173 431a265.23 265.23 0 005.808 6.02C123.333 485.371 187.62 512 256 512s132.667-26.629 181.02-74.98a261.107 261.107 0 005.808-6.02z"/></symbol></svg></div>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-down-arrow" viewBox="0 0 386.257 386.257"><path d="M0 96.879l193.129 192.5 193.128-192.5z"/></symbol><symbol id="icon-planet" viewBox="0 0 512 512"><path d="M44.96 401h422.08a254.077 254.077 0 0017.821-30H27.139a254.077 254.077 0 0017.821 30zM11.109 181c-5.89 19.32-9.482 39.432-10.662 60h511.106c-1.181-20.568-4.772-40.68-10.662-60zm3.287 160h483.207c7.843-22.345 12.563-45.856 13.949-70H.447c1.386 24.144 6.107 47.655 13.949 70zm445.379-240H52.225c-11.903 15.582-21.892 32.344-29.837 50h467.224c-7.945-17.656-17.934-34.418-29.837-50zm-26.834-30C385.081 25.173 322.477 0 256 0S126.919 25.173 79.059 71zM69.173 431a265.23 265.23 0 005.808 6.02C123.333 485.371 187.62 512 256 512s132.667-26.629 181.02-74.98a261.107 261.107 0 005.808-6.02z"/></symbol></svg></div>
     <div class="page__inner">
       <div class="page__content">
         <header class="header" id="headerMenu">
@@ -55,64 +56,74 @@
             </nav>
           </div>
         </header>
-        <main class="solar">
+        <main>
           <canvas class="sky js-sky" id="skyCanvas" data-stars="2000" data-colors="[0,60,240]"></canvas>
-          <div class="solar__inner">
-            <div class="sun centered"></div>
-            <div class="orbit centered orbit--mercury" data-speed="8.797">
-              <div class="orbit__inner">
-                <div class="planet planet--mercury mercury">
+          <section class="description">
+            <h1>Solar</h1>
+            <div class="description__text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat eveniet sint quaerat reprehenderit ut consectetur autem voluptate earum, animi adipisci vitae. Delectus unde soluta, nesciunt rerum necessitatibus qui ullam, sit minima pariatur vero reiciendis blanditiis, beatae totam fugit inventore nulla itaque recusandae earum quasi harum at id voluptates eum cupiditate!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi nulla officia blanditiis pariatur in nihil amet praesentium, deleniti vero.</p>
+            </div>
+            <div class="description__credits"><a class="description__repo" href="https://github.com/kenakula/solar">github.com/kenakula/solar</a><a class="description__author" href="https://github.com/kenakula">Kenan Agaev</a></div>
+          </section>
+          <div class="solar">
+            <div class="solar__inner">
+              <div class="sun centered"></div>
+              <div class="orbit centered orbit--mercury" data-speed="8.797">
+                <div class="orbit__inner">
+                  <div class="planet planet--mercury mercury">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--venus" data-speed="22.47">
-              <div class="orbit__inner">
-                <div class="planet planet--venus venus">
+              <div class="orbit centered orbit--venus" data-speed="22.47">
+                <div class="orbit__inner">
+                  <div class="planet planet--venus venus">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--earth" data-speed="36.52">
-              <div class="orbit__inner">
-                <div class="planet planet--earth earth">
+              <div class="orbit centered orbit--earth" data-speed="36.52">
+                <div class="orbit__inner">
+                  <div class="planet planet--earth earth">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--mars" data-speed="68.69">
-              <div class="orbit__inner">
-                <div class="planet planet--mars mars">
+              <div class="orbit centered orbit--mars" data-speed="68.69">
+                <div class="orbit__inner">
+                  <div class="planet planet--mars mars">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="asteroid-belt centered" data-speed="1679"></div>
-            <div class="orbit centered orbit--jupiter" data-speed="4328.90">
-              <div class="orbit__inner">
-                <div class="planet planet--jupiter jupiter">
+              <div class="asteroid-belt centered" data-speed="1679"></div>
+              <div class="orbit centered orbit--jupiter" data-speed="4328.90">
+                <div class="orbit__inner">
+                  <div class="planet planet--jupiter jupiter">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--saturn" data-speed="1075.2">
-              <div class="orbit__inner">
-                <div class="planet planet--saturn saturn">
-                  <div class="planet__ring planet__ring--saturn"></div>
+              <div class="orbit centered orbit--saturn" data-speed="1075.2">
+                <div class="orbit__inner">
+                  <div class="planet planet--saturn saturn">
+                    <div class="planet__ring planet__ring--saturn"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--uranus" data-speed="306.60">
-              <div class="orbit__inner">
-                <div class="planet planet--uranus uranus">
-                  <div class="planet__ring planet__ring--uranus"></div>
+              <div class="orbit centered orbit--uranus" data-speed="306.60">
+                <div class="orbit__inner">
+                  <div class="planet planet--uranus uranus">
+                    <div class="planet__ring planet__ring--uranus"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--neptune" data-speed="6011.5">
-              <div class="orbit__inner">
-                <div class="planet planet--neptune neptune">
+              <div class="orbit centered orbit--neptune" data-speed="6011.5">
+                <div class="orbit__inner">
+                  <div class="planet planet--neptune neptune">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="orbit centered orbit--pluto" data-speed="905.20">
-              <div class="orbit__inner">
-                <div class="planet planet--pluto pluto">
+              <div class="orbit centered orbit--pluto" data-speed="905.20">
+                <div class="orbit__inner">
+                  <div class="planet planet--pluto pluto">
+                  </div>
                 </div>
               </div>
             </div>

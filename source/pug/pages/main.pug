@@ -3,6 +3,7 @@ extends ../base/layout.pug
 block data
   include ../data/main-nav.data.pug
   include ../data/solar.data.pug
+  include ../data/description.data.pug
 
 block variables
   -
@@ -16,35 +17,38 @@ block variables
 
 block append head
   //- используйте только для шрифта находящегося на первом экране
-  link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/big-shoulders-display-400.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/montserrat-400.woff2", as="font", crossorigin="anonymous")
 
 block nav
   +main-nav(mainNav)
 
 block main
-  main.solar
+  main
     +sky(sky)
-    .solar__inner
-      +sun(sunImage)
-      +orbit(mercury)
-        +planet(mercury)
-      +orbit(venus)
-        +planet(venus)
-      +orbit(earth)
-        +planet(earth)
-      +orbit(mars)
-        +planet(mars)
-      .asteroid-belt.centered(data-speed="1679")
-      +orbit(jupiter)
-        +planet(jupiter)
-      +orbit(saturn)
-        +planet(saturn, true)
-      +orbit(uranus)
-        +planet(uranus, true)
-      +orbit(neptune)
-        +planet(neptune)
-      +orbit(pluto)
-        +planet(pluto)
+    +description(descriptionData)
+    .solar
+      .solar__inner
+        +sun(sunImage)
+        +orbit(mercury)
+          +planet(mercury)
+        +orbit(venus)
+          +planet(venus)
+        +orbit(earth)
+          +planet(earth)
+        +orbit(mars)
+          +planet(mars)
+        .asteroid-belt.centered(data-speed="1679")
+        +orbit(jupiter)
+          +planet(jupiter)
+        +orbit(saturn)
+          +planet(saturn, true)
+        +orbit(uranus)
+          +planet(uranus, true)
+        +orbit(neptune)
+          +planet(neptune)
+        +orbit(pluto)
+          +planet(pluto)
 
 block modals
   +modal("modal--feedback")

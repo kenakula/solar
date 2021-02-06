@@ -1,0 +1,93 @@
+.description {
+  position: absolute;
+  z-index: $description-z;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  width: 28%;
+  height: 100vh;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: $font-family--title;
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: 0.02em;
+    color: $color-white;
+  }
+
+  @include tablet {
+    width: 35%;
+  }
+}
+
+.description__text {
+  font-size: 18px;
+  color: $color-white;
+
+  p {
+    margin: 0;
+
+    & + p {
+      margin-top: 10px;
+    }
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.description__credits {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  a {
+    @include transition(opacity);
+    margin-bottom: 10px;
+    color: $color-white;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include min-laptop {
+      &:not(:last-child):hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 12px;
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.description__author {
+  opacity: 0.2;
+  font-size: 14px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    font-size: 10px;
+  }
+}
