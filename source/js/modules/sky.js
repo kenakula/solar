@@ -11,6 +11,15 @@ const drawStars = () => {
 
   const ctx = canvas.getContext('2d');
 
+  const getStarsCount = (initial) => {
+    if (window.innerWidth < 678) {
+      const result = initial / 2;
+      return result;
+    }
+
+    return initial;
+  };
+
   const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
@@ -34,12 +43,12 @@ const drawStars = () => {
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-    render(canvas, starsCount, colorRange);
+    render(canvas, getStarsCount(starsCount), colorRange);
   });
 
   window.addEventListener('resize', () => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    render(canvas, starsCount, colorRange);
+    render(canvas, getStarsCount(starsCount), colorRange);
   });
 };
 

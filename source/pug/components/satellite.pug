@@ -1,0 +1,8 @@
+mixin satellite(props)
+  - const {satellites} = props;
+
+  .satellite
+    each item in satellites
+      .satellite__orbit(class= `satellite__orbit--${item.name}`)
+        .satellite__inner
+          span

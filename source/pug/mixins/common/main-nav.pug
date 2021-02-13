@@ -15,3 +15,9 @@ mixin main-nav(props)
             | x
         .main-nav__caption
           span speed
+    .main-nav__list
+      each item in mainNav.links
+        li.main-nav__item(class= (item.hasHeart === 'true') ? 'main-nav__item--heart' : null)
+          a.main-nav__link.button.button--sheen.js-info-tabs-btn(href="#" data-modal=item.dataModal data-content=item.dataContent) !{item.name}
+            if item.hasHeart
+              +icon('icon-heart', 15, 15)

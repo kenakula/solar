@@ -1,5 +1,6 @@
 .button {
   @include button-reset;
+  @include transition(box-shadow);
 
   position: relative;
   display: flex;

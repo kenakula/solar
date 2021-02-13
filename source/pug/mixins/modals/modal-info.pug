@@ -1,0 +1,26 @@
+include ../../data/modal-info.data.pug
+
+mixin modal-info()
+  .modal-info
+    ul.modal-info__list.js-info-tabs
+      each item, i in modalInfo.list
+        - const activeClass = (i === 0) ? 'active' : null;
+        li.modal-info__item(class=activeClass data-content=item.dataContent)
+          h2.modal-info__title !{item.title}
+          .modal-info__content
+            if item.paras
+              p !{item.paras.para1}
+              p !{item.paras.para2}
+            .modal-info__slider
+              +slider()
+
+
+mixin slider(slides)
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide Slide 1
+      .swiper-slide Slide 2
+      .swiper-slide Slide 3
+    .swiper-button-prev
+    .swiper-button-next
+    .swiper-scrollbar

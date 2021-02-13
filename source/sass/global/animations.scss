@@ -29,12 +29,12 @@
   }
 
   1% {
-    display: block;
+    display: flex;
     opacity: 0;
   }
 
   100% {
-    display: block;
+    display: flex;
     opacity: 1;
   }
 }
@@ -84,6 +84,12 @@
 @keyframes rotate-orbit {
   100% {
     transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes rotate-satellite {
+  100% {
+    transform: rotate(360deg);
   }
 }
 

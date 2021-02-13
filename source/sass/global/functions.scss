@@ -2,6 +2,10 @@
   @return $planet-year-in-days * $day-in-seconds + s;
 }
 
+@function getspin($planet-spin) {
+  @return $planet-spin * 10 + s;
+}
+
 @function alphaRandom() {
   @return random(1000) * 0.001;
 }

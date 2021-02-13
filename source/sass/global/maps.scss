@@ -22,23 +22,51 @@ $orbits:
   "pluto" $pluto-orbit-speed "900px";
 
 
-$mercury-spin: revolution($mercury-spin);
-$venus-spin: revolution($venus-spin);
-$earth-spin: revolution($earth-spin);
-$mars-spin: revolution($mars-spin);
-$jupiter-spin: revolution($jupiter-spin);
-$saturn-spin: revolution($saturn-spin);
-$uranus-spin: revolution($uranus-spin);
-$neptune-spin: revolution($neptune-spin);
-$pluto-spin: revolution($pluto-spin);
+$mercury-spin: getspin($mercury-spin);
+$venus-spin: getspin($venus-spin);
+$earth-spin: getspin($earth-spin);
+$mars-spin: getspin($mars-spin);
+$jupiter-spin: getspin($jupiter-spin);
+$saturn-spin: getspin($saturn-spin);
+$uranus-spin: getspin($uranus-spin);
+$neptune-spin: getspin($neptune-spin);
+$pluto-spin: getspin($pluto-spin);
 
 $planets:
-  "mercury" "../img/content/mercury-bg.jpg" "8" "brown" $mercury-spin,
-  "venus" "../img/content/venus-bg.jpg" "14" "orange" $venus-spin,
-  "earth" "../img/content/earth-bg.jpg" "17" "blue" $earth-spin,
-  "mars" "../img/content/mars-bg.jpg" "14" "red" $mars-spin,
-  "jupiter" "../img/content/jupiter-bg.jpg" "60" "orange" $jupiter-spin,
-  "saturn" "../img/content/saturn-bg.jpg" "40" "yellow" $saturn-spin,
-  "uranus" "../img/content/uranus-bg.jpg" "30" "blue" $uranus-spin,
-  "neptune" "../img/content/neptune-bg.jpg" "25" "darkblue" $neptune-spin,
-  "pluto" "../img/content/mercury-bg.jpg" "10" "darkgrey" $pluto-spin;
+  "mercury" "../img/content/mercury-bg.jpg" "8" "transparent" $mercury-spin,
+  "venus" "../img/content/venus-bg.jpg" "14" "transparent" $venus-spin,
+  "earth" "../img/content/earth-bg.jpg" "17" "transparent" $earth-spin,
+  "mars" "../img/content/mars-bg.jpg" "14" "transparent" $mars-spin,
+  "jupiter" "../img/content/jupiter-bg.jpg" "60" "transparent" $jupiter-spin,
+  "saturn" "../img/content/saturn-bg.jpg" "40" "transparent" $saturn-spin,
+  "uranus" "../img/content/uranus-bg.jpg" "30" "transparent" $uranus-spin,
+  "neptune" "../img/content/neptune-bg.jpg" "25" "transparent" $neptune-spin,
+  "pluto" "../img/content/mercury-bg.jpg" "10" "transparent" $pluto-spin;
+
+
+$moon-speed: 1s;
+$phobos-speed: 0.7s;
+$deimos-speed: 0.4s;
+$io-speed: 2.5s;
+$europa-speed: 2.8s;
+$ganymed-speed: 3.2s;
+$callisto-speed: 4.1s;
+$titan-speed: 4.5s;
+$triton-speed: 4s;
+$titania-speed: 5.2s;
+$reya-speed: 6.1s;
+$oberone-speed: 7s;
+
+$satellites:
+  "moon" "#ECDAB3" "2px" $moon-speed,
+  "phobos" "#73611D" "3px" $phobos-speed,
+  "deimos" "#394233" "2px" $deimos-speed,
+  "io" "#BF8A14" "2px" $io-speed,
+  "europa" "#7C5C3E" "2px" $europa-speed,
+  "ganymed" "#7D9294" "4px" $ganymed-speed,
+  "callisto" "#457771" "5px" $callisto-speed,
+  "titan" "#4ABC91" "4px" $titan-speed,
+  "triton" "#14444E" "3px" $triton-speed,
+  "titania" "#8BF8D4" "2px" $titania-speed,
+  "reya" "#7689E1" "2px" $reya-speed,
+  "oberone" "#3B7072" "3px" $oberone-speed;

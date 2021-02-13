@@ -57,7 +57,7 @@ $retina-dppx:                       1.5dppx;
 // Z-indexes
 //---------------------------------
 
-$header-z:                          20;
+$header-z:                          25;
 $planet-z:                          5;
 $sky-z:                             1;
 $sun-z:                             100;
@@ -113,3 +113,6 @@ $pluto-spin:                        6.387;
 $asteroid-belt-border:             1px solid rgba(102, 166, 229, 0.12);
 $asteroid-orbit-outer:             400px;
 $asteroid-orbit-inner:             300px;
+
+// Satellites
+// --------------------------------

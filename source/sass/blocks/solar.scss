@@ -3,9 +3,9 @@
   z-index: $solar-z;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  perspective: 1000px;
-  transform-style: preserve-3d;
+  overflow-y: hidden;
+  // perspective: 1000px;
+  // transform-style: preserve-3d;
 }
 
 .solar__inner {
@@ -22,5 +22,15 @@
 
   @include tablet {
     transform: translate(-40%, -50%) scale(0.6);
+  }
+
+  @include mobile {
+    transform: translate(-50%, -45%) scale(0.5);
+  }
+
+  @media (max-width: 470px) {
+    left: -250px;
+    top: -100px;
+    transform: scale(0.5);
   }
 }
