@@ -87,6 +87,12 @@
   }
 }
 
+@keyframes rotate-satellite {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes rotate-planet-anticlockwise {
   100% {
     transform: rotate(-360deg);
