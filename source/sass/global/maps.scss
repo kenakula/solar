@@ -44,18 +44,18 @@ $planets:
   "pluto" "../img/content/mercury-bg.jpg" "10" "transparent" $pluto-spin;
 
 
-$moon-speed: random($limit: 5) + s;
-$phobos-speed: random($limit: 5) + s;
-$deimos-speed: random($limit: 5) + s;
-$io-speed: random($limit: 5) + s;
-$europa-speed: random($limit: 5) + s;
-$ganymed-speed: random($limit: 5) + s;
-$callisto-speed: random($limit: 5) + s;
-$titan-speed: random($limit: 5) + s;
-$triton-speed: random($limit: 5) + s;
-$titania-speed: random($limit: 5) + s;
-$reya-speed: random($limit: 5) + s;
-$oberone-speed: random($limit: 5) + s;
+$moon-speed: 1s;
+$phobos-speed: 0.7s;
+$deimos-speed: 0.4s;
+$io-speed: 2.5s;
+$europa-speed: 2.8s;
+$ganymed-speed: 3.2s;
+$callisto-speed: 4.1s;
+$titan-speed: 4.5s;
+$triton-speed: 4s;
+$titania-speed: 5.2s;
+$reya-speed: 6.1s;
+$oberone-speed: 7s;
 
 $satellites:
   "moon" "#ECDAB3" "2px" $moon-speed,

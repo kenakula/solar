@@ -5,7 +5,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 40px 20px 10px;
   width: 28%;
   height: 100vh;
 
@@ -21,6 +21,18 @@
 
   @include tablet {
     width: 35%;
+  }
+
+  @include mobile {
+    flex-direction: row;
+    padding-top: 70px;
+    width: 100%;
+    height: auto;
+
+    h1 {
+      font-size: 70px;
+      line-height: 80px;
+    }
   }
 }
 
@@ -42,6 +54,10 @@
 
   @include tablet {
     font-size: 12px;
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 
@@ -76,6 +92,12 @@
     a {
       margin-bottom: 0;
     }
+  }
+
+  @include mobile {
+    display: none;
+    margin-top: 0;
+    margin-left: auto;
   }
 }
 

@@ -75,5 +75,10 @@
     transform: translateX(0);
     min-width: 100vw;
     border-left: none;
+
+    &--opened {
+      box-shadow: none;
+      min-height: 100vh;
+    }
   }
 }
