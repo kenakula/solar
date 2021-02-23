@@ -4,8 +4,10 @@
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
-  // perspective: 1000px;
-  // transform-style: preserve-3d;
+
+  @include mobile {
+    overflow: hidden;
+  }
 }
 
 .solar__inner {
@@ -15,6 +17,7 @@
   width: 1000px;
   height: 1000px;
   transform: translate(-35%, -50%);
+  overflow: hidden;
 
   @include laptop {
     transform: translate(-40%, -50%) scale(0.8);
@@ -26,6 +29,7 @@
 
   @include mobile {
     transform: translate(-50%, -45%) scale(0.5);
+    overflow: scroll;
   }
 
   @media (max-width: 470px) {

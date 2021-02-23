@@ -1,5 +1,17 @@
+import Swiper from 'swiper';
+
 const tabsList = document.querySelector('.js-info-tabs');
 const tabsBtns = document.querySelectorAll('.js-info-tabs-btn');
+
+const initSlider = (tab) => {
+  const sliderContainer = tab.querySelector('.swiper-container');
+
+  if (sliderContainer) {
+    const swiper = new Swiper('.swiper-container', {
+      navigation: false,
+    });
+  }
+};
 
 const showTab = (evt) => {
   const target = evt.target.closest('.js-info-tabs-btn');
@@ -11,6 +23,7 @@ const showTab = (evt) => {
 
     activeTab.classList.remove('active');
     contentTab.classList.add('active');
+    initSlider(contentTab);
   }
 };
 
