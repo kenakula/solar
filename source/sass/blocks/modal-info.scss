@@ -39,8 +39,12 @@
 .modal-info__slider {
   margin-top: 20px;
 
+  .swiper-container {
+    width: 600px;
+    height: 300px;
+  }
+
   .swiper-wrapper {
-    margin: 0 auto;
-    max-width: 80%;
+    @include list-reset;
   }
 }

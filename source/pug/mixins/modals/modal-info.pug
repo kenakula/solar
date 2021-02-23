@@ -11,16 +11,14 @@ mixin modal-info()
             if item.paras
               p !{item.paras.para1}
               p !{item.paras.para2}
-            .modal-info__slider
-              +slider()
-
-
-mixin slider(slides)
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide Slide 1
-      .swiper-slide Slide 2
-      .swiper-slide Slide 3
-    .swiper-button-prev
-    .swiper-button-next
-    .swiper-scrollbar
+            .modal-info__slider.js-modal-slider
+              if (i===0)
+                .swiper-container
+                  ul.swiper-wrapper
+                    li.swiper-slide Slide 1
+                    li.swiper-slide Slide 2
+                    li.swiper-slide Slide 3
+                  .swiper-pagination
+                  button.swiper-button-prev
+                  button.swiper-button-next
+                  .swiper-scrollbar
