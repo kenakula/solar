@@ -5,6 +5,7 @@
 .modal-info__title {
   margin: 0;
   margin-bottom: 20px;
+  padding: 0 20px;
   font-family: $font-family--title;
   font-size: 60px;
   line-height: 70px;
@@ -25,10 +26,12 @@
 }
 
 .modal-info__content {
+  padding: 0 20px;
+
   p {
     margin: 0;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
 
     & + p {
       margin-top: 10px;
@@ -37,14 +40,34 @@
 }
 
 .modal-info__slider {
-  margin-top: 20px;
+  margin-bottom: 10px;
 
   .swiper-container {
-    width: 600px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
   }
 
   .swiper-wrapper {
     @include list-reset;
+  }
+
+  .swiper-slide {
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      border-radius: 0;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+    padding: 10px 0;
   }
 }
