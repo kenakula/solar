@@ -6,19 +6,13 @@ mixin modal-info()
       each item, i in modalInfo.list
         - const activeClass = (i === 0) ? 'active' : null;
         li.modal-info__item(class=activeClass data-content=item.dataContent)
+          .modal-info__slider.js-modal-slider
+            .swiper-container
+              ul.swiper-wrapper
+                each img in item.images
+                  li.swiper-slide
+                    img(src=img, alt="")
           h2.modal-info__title !{item.title}
           .modal-info__content
-            if item.paras
-              p !{item.paras.para1}
-              p !{item.paras.para2}
-            .modal-info__slider.js-modal-slider
-              if (i===0)
-                .swiper-container
-                  ul.swiper-wrapper
-                    li.swiper-slide Slide 1
-                    li.swiper-slide Slide 2
-                    li.swiper-slide Slide 3
-                  .swiper-pagination
-                  button.swiper-button-prev
-                  button.swiper-button-next
-                  .swiper-scrollbar
+            each para, key in item.paras
+              p !{para}
