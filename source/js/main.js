@@ -8,6 +8,7 @@ import { animateOrbits } from './modules/animate-orbits';
 import { setSpeed } from './modules/set-speed';
 import { tabs } from './modules/tabs';
 import { preload } from './modules/preload';
+import { tooltips } from './modules/tooltips';
 
 // Utils
 // ---------------------------------
@@ -28,3 +29,4 @@ animateOrbits();
 setSpeed();
 tabs();
 preload();
+tooltips();
