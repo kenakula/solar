@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   padding: 40px 20px 10px;
-  width: 28%;
   height: 100vh;
 
   h1 {
@@ -68,12 +67,7 @@
 
   a {
     @include transition(opacity);
-    margin-bottom: 10px;
     color: $color-white;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
     @include min-laptop {
       &:not(:last-child):hover {

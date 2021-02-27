@@ -3,9 +3,6 @@ mixin description(props)
 
   section.description
     h1 !{title}
-    .description__text
-      each item in paras
-        p !{item}
     .description__credits
       a.description__repo(href=repo.link) !{repo.name}
       a.description__author(href=author.git) !{author.name}
