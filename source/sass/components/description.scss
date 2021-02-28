@@ -52,6 +52,15 @@
   outline: none;
   -webkit-tap-highlight-color: $color-transparent;
 
+  &::before {
+    @include pseudo;
+
+    left: -10px;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+  }
+
   @include mobile {
     display: block;
   }

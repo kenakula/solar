@@ -9,6 +9,7 @@ import { setSpeed } from './modules/set-speed';
 import { tabs } from './modules/tabs';
 import { preload } from './modules/preload';
 import { tooltips } from './modules/tooltips';
+import { zoom } from './modules/zoom';
 
 // Utils
 // ---------------------------------
@@ -30,3 +31,4 @@ setSpeed();
 tabs();
 preload();
 tooltips();
+// zoom();

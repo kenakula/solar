@@ -1,27 +1,33 @@
-import Swiper from 'swiper';
+/* eslint-disable no-new */
+import Swiper, {Navigation, Pagination} from 'swiper';
+
+Swiper.use([Navigation, Pagination]);
 
 const tabs = () => {
   const tabsBtns = document.querySelectorAll('.js-info-tabs-btn');
   const tabsList = document.querySelector('.js-info-tabs');
 
+  const initSlider = (container) => {
+    const prevBtn = container.querySelector('.swiper-button-prev');
+    const nextBtn = container.querySelector('.swiper-button-next');
+    const paginationContainer = container.querySelector('.swiper-pagination');
 
-  const initSliders = () => {
-    const tabEls = tabsList.querySelectorAll('.modal-info__item');
-
-    tabEls.forEach((tab) => {
-      const sliderContainer = tab.querySelector('.swiper-container');
-
-      if (sliderContainer) {
-        const pagination = sliderContainer.querySelector('.swiper-pagination');
-
-        const swiper = new Swiper(sliderContainer, {
-          navigation: false,
-          spaceBetween: 1,
-          observer: true,
-          observeParents: true,
-        });
-      }
-    });
+    if (!container.swiper && container) {
+      const inst = new Swiper(container, {
+        spaceBetween: 1,
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn,
+        },
+        pagination: {
+          el: paginationContainer,
+          type: 'bullets',
+          clickable: true,
+        },
+        observer: true,
+        observeParents: true,
+      });
+    }
   };
 
   const showTab = (evt) => {
@@ -34,12 +40,10 @@ const tabs = () => {
 
       activeTab.classList.remove('active');
       contentTab.classList.add('active');
+      const sliderContainer = contentTab.querySelector('.swiper-container');
+      initSlider(sliderContainer);
     }
   };
-
-  if (tabsList) {
-    document.addEventListener('DOMContentLoaded', initSliders);
-  }
 
   if (tabsList && tabsBtns.length) {
     tabsBtns.forEach((btn) => {
