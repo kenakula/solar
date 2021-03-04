@@ -12,6 +12,9 @@ mixin modal-info()
                 each img in item.images
                   li.swiper-slide
                     img(src=img, alt="")
+              button.swiper-button-prev.modal-info__button.modal-info__button--prev
+              button.swiper-button-next.modal-info__button.modal-info__button--next
+              .swiper-pagination
           h2.modal-info__title !{item.title}
           .modal-info__content
             each para, key in item.paras

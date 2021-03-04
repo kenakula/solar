@@ -6,18 +6,7 @@
   display: flex;
   flex-direction: column;
   padding: 40px 20px 10px;
-  width: 28%;
   height: 100vh;
-
-  h1 {
-    margin: 0;
-    margin-bottom: 20px;
-    font-family: $font-family--title;
-    font-size: 90px;
-    line-height: 100px;
-    letter-spacing: 0.02em;
-    color: $color-white;
-  }
 
   @include tablet {
     width: 35%;
@@ -28,7 +17,22 @@
     padding-top: 70px;
     width: 100%;
     height: auto;
+  }
+}
 
+.description__header {
+  display: flex;
+  color: $color-white;
+  font-family: $font-family--title;
+
+  h1 {
+    margin: 0;
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: 0.02em;
+  }
+
+  @include mobile {
     h1 {
       font-size: 70px;
       line-height: 80px;
@@ -36,44 +40,118 @@
   }
 }
 
-.description__text {
-  font-size: 18px;
-  color: $color-white;
+.description__inner {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-top: 14px;
+  font-size: 20px;
+  letter-spacing: 0.02em;
 
-  p {
-    margin: 0;
-
-    & + p {
-      margin-top: 10px;
-    }
+  @include mobile {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 10px;
   }
+}
 
-  @include tablet {
-    font-size: 14px;
-  }
+.description__button {
+  @include button-reset;
 
-  @include tablet {
-    font-size: 12px;
+  position: absolute;
+  top: 105px;
+  right: 20px;
+  display: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: $color-white;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  outline: none;
+  -webkit-tap-highlight-color: $color-transparent;
+
+  &::before {
+    @include pseudo;
+
+    left: -10px;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
   }
 
   @include mobile {
+    display: block;
+  }
+}
+
+.description__info {
+  margin-top: auto;
+
+  @include mobile {
+    position: absolute;
+    top: 120px;
+    left: 50%;
     display: none;
+    flex-direction: column;
+    opacity: 0;
+    padding: 40px 15px 25px;
+    width: 280px;
+    border-radius: 10px;
+    background-color: rgba($color: $color-black, $alpha: 0.8);
+    backdrop-filter: blur(5px);
+    transform: translateX(-50%);
+    animation: fadeInFromNone 0.3s ease-in;
+
+    &.active {
+      display: flex;
+      opacity: 1;
+    }
+  }
+}
+
+.description__text {
+  color: $color-white;
+  text-align: center;
+
+  strong {
+    display: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 14px;
+    max-width: 240px;
+    text-align: left;
+
+    @include mobile {
+      margin-bottom: 70px;
+      max-width: 100%;
+      font-size: 16px;
+      text-align: center;
+    }
   }
 }
 
 .description__credits {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  font-size: 12px;
+  line-height: 20px;
 
   a {
     @include transition(opacity);
-    margin-bottom: 10px;
     color: $color-white;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
     @include min-laptop {
       &:not(:last-child):hover {
@@ -82,28 +160,15 @@
     }
   }
 
-  @include tablet {
-    font-size: 14px;
-  }
-
-  @include tablet {
-    font-size: 12px;
-
-    a {
-      margin-bottom: 0;
-    }
-  }
-
   @include mobile {
-    display: none;
-    margin-top: 0;
-    margin-left: auto;
+    align-items: flex-start;
   }
 }
 
 .description__author {
   opacity: 0.2;
-  font-size: 14px;
+  font-size: 10px;
+  line-height: 18px;
 
   @include tablet {
     font-size: 12px;

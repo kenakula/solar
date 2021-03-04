@@ -7,6 +7,10 @@ import { drawStars } from './modules/sky';
 import { animateOrbits } from './modules/animate-orbits';
 import { setSpeed } from './modules/set-speed';
 import { tabs } from './modules/tabs';
+import { preload } from './modules/preload';
+import { tooltips } from './modules/tooltips';
+import { zoom } from './modules/zoom';
+import { planets } from './modules/planets';
 
 // Utils
 // ---------------------------------
@@ -26,3 +30,7 @@ drawStars();
 animateOrbits();
 setSpeed();
 tabs();
+preload();
+tooltips();
+// zoom();
+// planets();

@@ -1,11 +1,17 @@
 mixin description(props)
-  - const { title, paras, author, repo } = props;
+  - const { title, author, repo, perfomanceNote, thanks } = props;
 
   section.description
-    h1 !{title}
-    .description__text
-      each item in paras
-        p !{item}
-    .description__credits
-      a.description__repo(href=repo.link) !{repo.name}
-      a.description__author(href=author.git) !{author.name}
+    .description__header
+      h1 !{title}
+      .description__inner
+        span CSS animated
+        span ES6 powered
+    button.description__button.js-tooltip-btn(data-tooltip="info") i
+    .description__info#info
+      .description__text
+        strong !{perfomanceNote}
+        p !{thanks}
+      .description__credits
+        a.description__repo(href=repo.link) !{repo.name}
+        a.description__author(href=author.git) !{author.name}

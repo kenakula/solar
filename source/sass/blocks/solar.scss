@@ -4,9 +4,19 @@
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
+  // touch-action: auto;
 
   @include mobile {
-    overflow: hidden;
+    overflow-x: scroll;
+
+    overflow: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -16,25 +26,18 @@
   top: 50%;
   width: 1000px;
   height: 1000px;
-  transform: translate(-35%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
-
-  @include laptop {
-    transform: translate(-40%, -50%) scale(0.8);
-  }
+  transition: transform 0.1s linear;
 
   @include tablet {
-    transform: translate(-40%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.7);
   }
 
   @include mobile {
-    transform: translate(-50%, -45%) scale(0.5);
-    overflow: scroll;
-  }
-
-  @media (max-width: 470px) {
-    left: -250px;
-    top: -100px;
-    transform: scale(0.5);
+    // top: auto;
+    // bottom: -250px;
+    left: 237px;
+    transform: translate(-50%, -44%) scale(0.5);
   }
 }

@@ -53,15 +53,22 @@
   }
 
   .swiper-slide {
-    border-radius: 10px;
+    position: relative;
+    padding-bottom: 44%;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
 
     img {
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
     @include mobile {
+      padding-bottom: 60%;
       border-radius: 0;
     }
   }
@@ -69,5 +76,43 @@
   .swiper-pagination {
     bottom: 0;
     padding: 10px 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-cadmium-orange;
+  }
+}
+
+.modal-info__button {
+  @include button-reset;
+
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  width: 60px;
+  height: 100%;
+  outline: none;
+  transition: background $default-transition-settings, color $default-transition-settings;
+  color: $color-cadmium-orange;
+
+  &:hover {
+    background-color: rgba($color: $color-nero, $alpha: 0.3);
+    color: rgba($color: $color-cadmium-orange, $alpha: 0.7);
+  }
+
+  &--next {
+    left: auto;
+    right: 0;
+  }
+
+  @include mobile {
+    &:hover {
+      background-color: initial;
+      color: initial;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
