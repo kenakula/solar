@@ -12,7 +12,7 @@
   perspective: 1000px;
   transform-style: preserve-3d;
 
-  @each $name, $speed, $diameter in $orbits {
+  @each $name, $speed, $diameter, $zi in $orbits {
     $time: $speed;
     $width: unquote($string: $diameter);
     $angle: random($limit: 360) + deg;
@@ -21,6 +21,7 @@
       width: $width;
       height: $width;
       animation-duration: $time;
+      z-index: $zi;
       // transform: translate(-50%, -50%) rotate($angle);
 
       .orbit__inner {

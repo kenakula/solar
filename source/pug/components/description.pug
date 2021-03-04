@@ -2,7 +2,11 @@ mixin description(props)
   - const { title, author, repo, perfomanceNote, thanks } = props;
 
   section.description
-    h1 !{title}
+    .description__header
+      h1 !{title}
+      .description__inner
+        span CSS animated
+        span ES6 powered
     button.description__button.js-tooltip-btn(data-tooltip="info") i
     .description__info#info
       .description__text

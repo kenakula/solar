@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
+  // touch-action: auto;
 
   @include mobile {
     overflow-x: scroll;

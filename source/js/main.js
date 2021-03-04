@@ -10,6 +10,7 @@ import { tabs } from './modules/tabs';
 import { preload } from './modules/preload';
 import { tooltips } from './modules/tooltips';
 import { zoom } from './modules/zoom';
+import { planets } from './modules/planets';
 
 // Utils
 // ---------------------------------
@@ -32,3 +33,4 @@ tabs();
 preload();
 tooltips();
 // zoom();
+// planets();

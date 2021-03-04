@@ -10,16 +10,16 @@ $neptune-orbit-speed: revolution($neptune-days);
 $pluto-orbit-speed: revolution($pluto-days);
 
 $orbits:
-  "mercury" $mercury-orbit-speed "80px",
-  "venus" $venus-orbit-speed "120px",
-  "earth" $earth-orbit-speed "170px",
-  "mars" $mars-orbit-speed "240px",
-  "asteroids" $asteroids-orbit-speed "500px",
-  "jupiter" $jupiter-orbit-speed "480px",
-  "saturn" $saturn-orbit-speed "620px",
-  "uranus" $uranus-orbit-speed "770px",
-  "neptune" $neptune-orbit-speed "850px",
-  "pluto" $pluto-orbit-speed "900px";
+  "mercury" $mercury-orbit-speed "80px" 60,
+  "venus" $venus-orbit-speed "120px" 59,
+  "earth" $earth-orbit-speed "170px" 58,
+  "mars" $mars-orbit-speed "240px" 57,
+  "asteroids" $asteroids-orbit-speed "500px" 56,
+  "jupiter" $jupiter-orbit-speed "480px" 55,
+  "saturn" $saturn-orbit-speed "620px" 54,
+  "uranus" $uranus-orbit-speed "770px" 53,
+  "neptune" $neptune-orbit-speed "850px" 52,
+  "pluto" $pluto-orbit-speed "900px" 51;
 
 
 $mercury-spin: getspin($mercury-spin);
